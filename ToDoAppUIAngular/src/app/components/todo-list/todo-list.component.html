@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+
+
+<app-todo
+  *ngFor="let todo of todos" 
+  [todo]="todo"
+  (deleteTodo)="deleteTodo($event)"
+  >
+</app-todo>
