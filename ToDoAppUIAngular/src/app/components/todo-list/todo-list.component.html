@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-
+<app-add-todo (addTodo)="addTodo($event)"></app-add-todo>
 <app-todo
   *ngFor="let todo of todos" 
   [todo]="todo"

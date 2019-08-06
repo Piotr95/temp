@@ -26,8 +26,8 @@ export class TodoService {
   }
 
   // Add Todo
-  addTodo(todo: ToDo): Observable<ToDo> {
-    return this.http.post<ToDo>(this.todosUrl, todo, this.httpOptions);
+  addTodo(todo: ToDo): Observable<string> {
+    return this.http.post<string>(this.todosUrl, todo.title, this.httpOptions);
   }
 
   // Toggle Completed

@@ -18,6 +18,14 @@ export class TodoListComponent implements OnInit {
     // Remove from server
     this.todoService.deleteTodo(todo.id).subscribe(); }
 
+    addTodo(todo: ToDo) {
+      // tslint:disable-next-line:no-shadowed-variable
+      this.todoService.addTodo(todo).subscribe(todo => {
+        this.todos.push();
+      });
+    }
+
+
   ngOnInit() {
     this.todoService.getTodos().subscribe(todos => {
       this.todos = todos;
